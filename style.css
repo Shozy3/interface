@@ -136,7 +136,7 @@ body {
 #help-button {
   position: absolute;
   top: 10px;
-  right: 70px;
+  right: 40px;
   width: 30px;
   height: 30px;
   border: 1px solid black; /* add border property here */
@@ -255,16 +255,18 @@ body {
 
 #footer {
   background-color: #f2f2f2;
+  position: fixed;
+  box-sizing: border-box;
   color: #333;
   padding: 20px;
-  position: absolute;
   bottom: 0;
   right: 0;
-  left: 950px;
-  height: 75px; /* adjust height as needed */
-  width: 700px;
+  left: 0;
+  max-height: 100px; /* adjust height as needed */
+  width: 100%;
   overflow: auto;
 }
+
 
 
 /* Responsive layout */
