@@ -37,8 +37,7 @@ function onEachFeature(feature, layer) {
         mouseout: resetHighlight,
         click: function(e) {
             if (feature.properties.id === 31246611) {
-                const info = document.getElementById("info");
-                info.innerHTML = '<img src="logo.png">';
+                console.log("Building was clicked");
             }
         }
     });
