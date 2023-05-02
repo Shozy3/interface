@@ -60,7 +60,7 @@ function onEachFeature(feature, layer) {
             dropdown.addEventListener("change", function() {
               const selectedValue = dropdown.value;
               const date_options = ["rate-of-spread", "intensity-factor1", "intensity-factor2", "intensity-factor3"]
-              if (date_options.includes(selectedValue))
+              if (selectedValue === "fire-behavior" && check === true)
               {
                 console.log(selectedValue);
                 document.getElementById("datepicker").disabled = false;
@@ -74,6 +74,7 @@ function onEachFeature(feature, layer) {
         
     });
 }
+
 
 function showInstructions() {
   const instructionsContainer = document.getElementById("instructions-container");
@@ -133,149 +134,7 @@ osmToGeoJSONScript.src = "https://cdn.rawgit.com/tyrasd/osmtogeojson/2.2.0/osmto
 osmToGeoJSONScript.onload = fetchBuildings;
 document.body.appendChild(osmToGeoJSONScript);
 
-const imageMap = {
 
-  "satellite-map": function(date) {
-    if (check)
-    {
-      return date === "" ? "1) SatelliteMap.jpg" : null;
-    }
-  },
-
-  "grass-zone1": function(date) {
-    if (check)
-    {
-      return date === "" ? "5.1) GrassZone1.jpg" : null;
-    }
-  },
-
-  "grass-zone2": function(date) {
-    if (check)
-    {
-      return date === "" ? "5.4) GrassZone2.jpg" : null;
-    }
-  },
-
-  "grass-zone3": function(date) {
-    if (check)
-    {
-      return date === "" ? "5.7) GrassZone3.jpg" : null;
-    }
-  },
-
-  "fuel-map-overlay": function(date) {
-    if (check)
-    {
-      return date === "" ? "4) FuelMapOverlay.jpg" : null;
-    }
-  },
-
-  "deciduous-zone1": function(date) {
-    if (check)
-    {
-      return date === "" ? "5.2) DeciduousZone1.jpg" : null;
-    }
-  },
-
-  "deciduous-zone2": function(date) {
-    if (check)
-    {
-      return date === "" ? "5.5) DeciduousZone2.jpg" : null;
-    }
-  },
-
-  "deciduous-zone3": function(date) {
-    if (check)
-    {
-      return date === "" ? "5.8) DeciduousZone3.jpg" : null;
-    }
-  },
-
-  "conifer-zone1": function(date) {
-    if (check)
-    {
-      return date === "" ? "5.3) ConiferZone1.jpg" : null;
-    }
-  },
-
-  "conifer-zone2": function(date) {
-    if (check)
-    {
-      return date === "" ? "5.6) ConiferZone2.jpg" : null;
-    }
-  },
-
-  "conifer-zone3": function(date) {
-    if (check)
-    {
-      return date === "" ? "5.9) ConiferZone3.jpg" : null;
-    }
-  },
-
-  "fpb-map": function(date) {
-    if (check)
-    {
-      return date === "" ? "5.10) FPBmap.jpg" : null;
-    }
-  },
-  "spread-factor": function(date) {
-    if (check)
-    {
-      return date === "" ? "5.11) SpreadFactor.jpg" : null;
-    }
-  },
-  "rate-of-spread": function(date) {
-    if (check)
-    {
-      if (date === "2022-08-16") {
-        return "5.12) RateSpread-Aug16.jpg";
-      } else if (date === "2022-11-01") {
-        return "5.13) RateSpread-Nov1.jpg";
-      } else {
-        return null;
-      }
-    }
-  },
-  "intensity-factor1": function(date) {
-    if (check)
-    {
-      if (date === "2022-08-16") {
-        return "5.14) IntensityFactor1-Aug16.jpg";
-      } else if (date === "2022-11-01") {
-        return "5.17) IntensityFactor1-Nov1.jpg";
-      } else {
-        return null;
-      }
-    }
-  },
-
-  "intensity-factor2": function(date) {
-    if (check)
-    {
-      if (date === "2022-08-16") {
-        return "5.15) IntensityFactor2-Aug16.jpg";
-      } else if (date === "2022-11-01") {
-        return "5.18) IntensityFactor2-Nov1.jpg";
-      } else {
-        return null;
-      }
-    }
-  },
-
-  "intensity-factor3": function(date) {
-    if (check)
-    {
-
-      if (date === "2022-08-16") {
-        return "5.16) IntensityFactor3-Aug16.jpg";
-      } else if (date === "2022-11-01") {
-        return "5.19) IntensityFactor3-Nov1.jpg";
-      } else {
-        return null;
-      }
-    }
-  }
-};
 
 function showInstructions() {
   const instructionsContainer = document.getElementById("instructions-container");
@@ -297,17 +156,129 @@ function downloadImage() {
   document.body.removeChild(link);
 }
 
-const updateButton = document.getElementById("update-button");
+// Get the popup and close button elements
+var popup = document.getElementById("popup");
+var close = document.getElementById("close");
 
+// Show the popup when the page loads
+window.onload = function() {
+  popup.style.display = "block";
+}
+
+// Hide the popup when the close button is clicked
+close.onclick = function() {
+  popup.style.display = "none";
+}
+
+
+const imageMap = {
+
+  "fuel-map-topography": function(date) {
+    const fmtDropdown = document.getElementById("fmt");
+    const fmtValue = fmtDropdown.value;
+
+    if (check) {
+      switch (fmtValue) {
+        case "grass-zone1":
+          return date === "" ? "5.1) GrassZone1.jpg" : null;
+        case "grass-zone2":
+          return date === "" ? "5.4) GrassZone2.jpg" : null;
+        case "grass-zone3":
+          return date === "" ? "5.7) GrassZone3.jpg" : null;
+        case "deciduous-zone1":
+          return date === "" ? "5.2) DeciduousZone1.jpg" : null;
+        case "deciduous-zone2":
+          return date === "" ? "5.5) DeciduousZone2.jpg" : null;
+        case "deciduous-zone3":
+          return date === "" ? "5.8) DeciduousZone3.jpg" : null;
+        case "conifer-zone1":
+          return date === "" ? "5.3) ConiferZone1.jpg" : null;
+        case "conifer-zone2":
+          return date === "" ? "5.6) ConiferZone2.jpg" : null;
+        case "conifer-zone3":
+          return date === "" ? "5.9) ConiferZone3.jpg" : null;
+        case "fuel-map-overlay":
+          return date === "" ? "4) FuelMapOverlay.jpg" : null;
+        case "fpb-map":
+          return date === "" ? "5.10) FPBmap.jpg" : null;
+        case "spread-factor":
+          return date === "" ? "5.11) SpreadFactor.jpg" : null;
+        default:
+          return null;
+      }
+    }
+  },
+
+  "fire-behavior": function(date) {
+    const fbDropdown = document.getElementById("fb");
+    const fbValue = fbDropdown.value;
+
+    if (check) {
+      switch (fbValue) {
+        case "rate-of-spread":
+          if (date === "2022-08-16") {
+            return "5.12) RateSpread-Aug16.jpg";
+          } else if (date === "2022-11-01") {
+            return "5.13) RateSpread-Nov1.jpg";
+          } else {
+            return null;
+          }
+        case "intensity-factor1":
+          if (date === "2022-08-16") {
+            return "5.14) IntensityFactor1-Aug16.jpg";
+          } else if (date === "2022-11-01") {
+            return "5.17) IntensityFactor1-Nov1.jpg";
+          } else {
+            return null;
+          }
+        case "intensity-factor2":
+          if (date === "2022-08-16") {
+            return "5.15) IntensityFactor2-Aug16.jpg";
+          } else if (date === "2022-11-01") {
+            return "5.18) IntensityFactor2-Nov1.jpg";
+          } else {
+            return null;
+          }
+        case "intensity-factor3":
+          if (date === "2022-08-16") {
+            return "5.16) IntensityFactor3-Aug16.jpg";
+          } else if (date === "2022-11-01") {
+            return "5.19) IntensityFactor3-Nov1.jpg";
+          } else {
+            return null;
+          }
+        default:
+          return null;
+      }
+    }
+  }
+};
+
+const updateButton = document.getElementById("update-button");
 let imageContainer = null;
 
 updateButton.addEventListener("click", function() {
   const mapDropdown = document.getElementById("map-dropdown");
   const mapType = mapDropdown.value;
+  
+  const fmtDropdown = document.getElementById("fmt");
+  const fmtValue = fmtDropdown.value;
+  
+  const fbDropdown = document.getElementById("fb");
+  const fbValue = fbDropdown.value;
+  
   const dateInput = document.getElementById("datepicker");
   const date = dateInput.value;
-  const getImageFilename = imageMap[mapType];
-  const imageName = getImageFilename(date);
+  
+  let imageName;
+  if (mapType === "fuel-map-topography") {
+    const getImageFilename = imageMap[mapType];
+    imageName = getImageFilename(date, fmtValue);
+  } else if (mapType === "fire-behavior") {
+    const getImageFilename = imageMap[mapType];
+    imageName = getImageFilename(date, fbValue);
+  }
+  
   if (imageName) {
     const imageUrl = imageName + "?" + Date.parse(date);
     if (!imageContainer) {
@@ -328,6 +299,8 @@ updateButton.addEventListener("click", function() {
   }
   fetchBuildings();
 });
+
+
 
 
 
