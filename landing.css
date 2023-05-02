@@ -26,6 +26,7 @@ body
 h1
 {
     text-align: center;
+    font-size: 50px;
     text-shadow: 2px 2px 5px #000000;
     color: white;
     -webkit-text-stroke: 1px #000000;

@@ -266,6 +266,21 @@ function showInstructions() {
   instructionsContainer.style.display = (instructionsContainer.style.display === "none") ? "block" : "none";
 }
 
+function downloadImage() {
+  // Get the currently selected image
+  var image = document.getElementById("map-image");
+
+  // Create a new anchor element to trigger the download
+  var link = document.createElement("a");
+  link.download = "map.png";
+  link.href = image.src;
+
+  // Trigger the download by clicking the anchor element
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
 
 
 
