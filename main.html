@@ -15,9 +15,9 @@
     <div class="controls-container">
       <div id="controls">
         <label for="datepicker" id="datepicker-label">Date:</label>
-        <input type="text" id="datepicker" placeholder="YYYY-MM-DD">
+        <input type="text" id="datepicker" placeholder="YYYY-MM-DD" disabled>
         <label for="map-dropdown" id="map-dropdown-label">Map Type:</label>
-        <select id="map-dropdown">
+        <select id="map-dropdown" disabled>
           <option value="-1">-Select-</option>
           <option value="satellite-map">Satellite Map</option>
           <option value="fuel-map-overlay">Fuel Map Overlay</option>
@@ -37,11 +37,11 @@
           <option value="intensity-factor2">Intensity Factor 2</option>
           <option value="intensity-factor3">Intensity Factor 3</option>
         </select>
-        <button id="update-button">Update</button>
+        <button id="update-button" disabled>Update</button>
         <button id="help-button" onclick="showInstructions()">?</button>
         <div id="instructions-container">
           <h2>Instructions</h2>
-          <p>Select a map type and a date, then click the "Update" button to display a map image.</p>
+          <p>For this demo, click on and highlight the Kinsmen Sports Centre, select a map type and a date, then click the "Update" button to display the map image.</p>
         </div>
       </div>
       <div id="image-container">

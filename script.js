@@ -15,6 +15,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19
 }).addTo(map);
 
+
 function highlightFeature(e) {
     const layer = e.target;
     layer.setStyle({
@@ -31,15 +32,30 @@ function resetHighlight(e) {
     });
 }
 
+let check = false;
+
 function onEachFeature(feature, layer) {
     layer.on({
-        mouseover: highlightFeature,
-        mouseout: resetHighlight,
-        click: function(e) {
+
+        click: function(e) 
+        {
             if (feature.properties.id === 31246611) {
-                console.log("Building was clicked");
+              highlightFeature(e);
+              document.getElementById("datepicker").disabled = false;
+              document.getElementById("map-dropdown").disabled = false;
+              document.getElementById("update-button").disabled = false;
+              check = true;
+
+            }
+            else{
+              resetHighlight(e);
+              document.getElementById("datepicker").disabled = true;
+              document.getElementById("map-dropdown").disabled = true;
+              document.getElementById("update-button").disabled = true;
+              check = false;
             }
         }
+        
     });
 }
 
@@ -104,97 +120,143 @@ document.body.appendChild(osmToGeoJSONScript);
 const imageMap = {
 
   "satellite-map": function(date) {
-    return date === "" ? "1) SatelliteMap.jpg" : null;
+    if (check)
+    {
+      return date === "" ? "1) SatelliteMap.jpg" : null;
+    }
   },
 
   "grass-zone1": function(date) {
-    return date === "" ? "5.1) GrassZone1.jpg" : null;
+    if (check)
+    {
+      return date === "" ? "5.1) GrassZone1.jpg" : null;
+    }
   },
 
   "grass-zone2": function(date) {
-    return date === "" ? "5.4) GrassZone2.jpg" : null;
+    if (check)
+    {
+      return date === "" ? "5.4) GrassZone2.jpg" : null;
+    }
   },
 
   "grass-zone3": function(date) {
-    return date === "" ? "5.7) GrassZone3.jpg" : null;
+    if (check)
+    {
+      return date === "" ? "5.7) GrassZone3.jpg" : null;
+    }
   },
 
   "fuel-map-overlay": function(date) {
-    return date === "" ? "4) FuelMapOverlay.jpg" : null;
+    if (check)
+    {
+      return date === "" ? "4) FuelMapOverlay.jpg" : null;
+    }
   },
 
   "deciduous-zone1": function(date) {
-    return date === "" ? "5.2) DeciduousZone1.jpg" : null;
+    if (check)
+    {
+      return date === "" ? "5.2) DeciduousZone1.jpg" : null;
+    }
   },
 
   "deciduous-zone2": function(date) {
-    return date === "" ? "5.5) DeciduousZone2.jpg" : null;
+    if (check)
+    {
+      return date === "" ? "5.5) DeciduousZone2.jpg" : null;
+    }
   },
 
   "deciduous-zone3": function(date) {
-    return date === "" ? "5.8) DeciduousZone3.jpg" : null;
+    if (check)
+    {
+      return date === "" ? "5.8) DeciduousZone3.jpg" : null;
+    }
   },
 
   "conifer-zone1": function(date) {
-    return date === "" ? "5.3) ConiferZone1.jpg" : null;
+    if (check)
+    {
+      return date === "" ? "5.3) ConiferZone1.jpg" : null;
+    }
   },
 
   "conifer-zone2": function(date) {
-    return date === "" ? "5.6) ConiferZone2.jpg" : null;
+    if (check)
+    {
+      return date === "" ? "5.6) ConiferZone2.jpg" : null;
+    }
   },
 
   "conifer-zone3": function(date) {
-    return date === "" ? "5.9) ConiferZone3.jpg" : null;
+    if (check)
+    {
+      return date === "" ? "5.9) ConiferZone3.jpg" : null;
+    }
   },
 
-  "zone-map": function(date) {
-    return date === "" ? "ZoneMap.jpg" : null;
-  },
-  "fuel-map": function(date) {
-    return date === "" ? "FuelMap.jpg" : null;
-  },
   "fpb-map": function(date) {
-    return date === "" ? "5.10) FPBmap.jpg" : null;
+    if (check)
+    {
+      return date === "" ? "5.10) FPBmap.jpg" : null;
+    }
   },
   "spread-factor": function(date) {
-    return date === "" ? "5.11) SpreadFactor.jpg" : null;
+    if (check)
+    {
+      return date === "" ? "5.11) SpreadFactor.jpg" : null;
+    }
   },
   "rate-of-spread": function(date) {
-    if (date === "2022-08-16") {
-      return "5.12) RateSpread-Aug16.jpg";
-    } else if (date === "2022-11-01") {
-      return "5.13) RateSpread-Nov1.jpg";
-    } else {
-      return null;
+    if (check)
+    {
+      if (date === "2022-08-16") {
+        return "5.12) RateSpread-Aug16.jpg";
+      } else if (date === "2022-11-01") {
+        return "5.13) RateSpread-Nov1.jpg";
+      } else {
+        return null;
+      }
     }
   },
   "intensity-factor1": function(date) {
-    if (date === "2022-08-16") {
-      return "5.14) IntensityFactor1-Aug16.jpg";
-    } else if (date === "2022-11-01") {
-      return "5.17) IntensityFactor1-Nov1.jpg";
-    } else {
-      return null;
+    if (check)
+    {
+      if (date === "2022-08-16") {
+        return "5.14) IntensityFactor1-Aug16.jpg";
+      } else if (date === "2022-11-01") {
+        return "5.17) IntensityFactor1-Nov1.jpg";
+      } else {
+        return null;
+      }
     }
   },
 
   "intensity-factor2": function(date) {
-    if (date === "2022-08-16") {
-      return "5.15) IntensityFactor2-Aug16.jpg";
-    } else if (date === "2022-11-01") {
-      return "5.18) IntensityFactor2-Nov1.jpg";
-    } else {
-      return null;
+    if (check)
+    {
+      if (date === "2022-08-16") {
+        return "5.15) IntensityFactor2-Aug16.jpg";
+      } else if (date === "2022-11-01") {
+        return "5.18) IntensityFactor2-Nov1.jpg";
+      } else {
+        return null;
+      }
     }
   },
 
   "intensity-factor3": function(date) {
-    if (date === "2022-08-16") {
-      return "5.16) IntensityFactor3-Aug16.jpg";
-    } else if (date === "2022-11-01") {
-      return "5.19) IntensityFactor3-Nov1.jpg";
-    } else {
-      return null;
+    if (check)
+    {
+
+      if (date === "2022-08-16") {
+        return "5.16) IntensityFactor3-Aug16.jpg";
+      } else if (date === "2022-11-01") {
+        return "5.19) IntensityFactor3-Nov1.jpg";
+      } else {
+        return null;
+      }
     }
   }
 };
