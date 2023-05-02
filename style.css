@@ -36,16 +36,18 @@ html, body {
 #map-image-container {
   max-width: 600px;
   max-height: 600px;
+  margin-right: 50px;
+  margin-top: 50px;
+  position: absolute;
   overflow: hidden;
 }
 
 #map-image {
-  max-width: 100%;
-  max-height: 100%;
-  margin-top: 1000px;
+  max-width: 95%;
+  max-height: 95%;
   border: 2px solid black;
-  margin-top: 50px;
   display: block;
+  transition: transform 0.3s ease-in-out;
   margin: auto;
 }
 
@@ -135,8 +137,8 @@ body {
 }
 #help-button {
   position: absolute;
-  top: 10px;
-  right: 30px;
+  top: 50px;
+  right: 33px;
   width: 30px;
   height: 30px;
   border: 1px solid black; /* add border property here */
@@ -145,7 +147,7 @@ body {
   font-weight: bold;
   font-size: 24px;
   cursor: pointer;
-  background-color: #f2f2f2;
+  background-color: #a5a3a3;
   border: 1px solid #ccc;
   color: #333;
   z-index: 1;
@@ -192,6 +194,7 @@ body {
 #info-container {
   display: none;
   position: absolute;
+  border-radius: 100px;
   top: 50px;
   right: 50px;
   width: 300px;
@@ -206,68 +209,54 @@ body {
   position: relative;
 }
 
-#close-info-button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 20px;
-  height: 20px;
+#datepicker-label
+{
+  font-family: 'Trebuchet MS';
+}
+
+#map-dropdown-label
+{
+  font-family: 'Trebuchet MS';
+}
+
+#map-dropdown
+{
+  font-family: 'Trebuchet MS';
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #a5a3a3;
+  color: #000000;
   border: none;
-  background-color: #fff;
-  color: #333;
-  font-weight: bold;
-  font-size: 16px;
-  cursor: pointer;
-}
-.popup {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.4);
-}
-
-.popup-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-.close {
-  color: #f00;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-#footer {
-  background-color: #f2f2f2;
-  color: #333;
-  padding: 20px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 1000px;
-  height: 75px; /* adjust height as needed */
-  width: 500px;
-  overflow: auto;
+#update-button
+{
+  font-family: 'Trebuchet MS';
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #a5a3a3;
+  color: #000000;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-
-
+#datepicker
+{
+  font-family: 'Trebuchet MS';
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #a5a3a3;
+  color: #000000;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
 /* Responsive layout */
 @media only screen and (max-width: 768px) {
