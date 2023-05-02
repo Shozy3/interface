@@ -35,15 +35,18 @@ function resetHighlight(e) {
 let check = false;
 
 function onEachFeature(feature, layer) {
+  const dropdown = document.getElementById("map-dropdown");
+
     layer.on({
 
         click: function(e) 
         {
-            if (feature.properties.id === 31246611) {
+            if (feature.properties.id === 31246611)
+            {
               highlightFeature(e);
-              document.getElementById("datepicker").disabled = false;
               document.getElementById("map-dropdown").disabled = false;
               document.getElementById("update-button").disabled = false;
+              document.getElementById("download-button").disabled = false;
               check = true;
 
             }
@@ -54,6 +57,19 @@ function onEachFeature(feature, layer) {
               document.getElementById("update-button").disabled = true;
               check = false;
             }
+            dropdown.addEventListener("change", function() {
+              const selectedValue = dropdown.value;
+              const date_options = ["rate-of-spread", "intensity-factor1", "intensity-factor2", "intensity-factor3"]
+              if (date_options.includes(selectedValue))
+              {
+                console.log(selectedValue);
+                document.getElementById("datepicker").disabled = false;
+              }
+              else
+              {
+                document.getElementById("datepicker").disabled = true;
+              }
+            });
         }
         
     });
@@ -280,6 +296,37 @@ function downloadImage() {
   link.click();
   document.body.removeChild(link);
 }
+
+const imageContainers = document.querySelectorAll('.image-container');
+imageContainers.forEach(container => {
+  const overlay = container.querySelector('.overlay');
+  const enlargedImage = overlay.querySelector('.enlarged-image');
+  const close = overlay.querySelector('.close');
+  const originalImage = container.querySelector('img');
+
+  originalImage.addEventListener('click', () => {
+    overlay.style.display = 'flex';
+    enlargedImage.src = originalImage.src;
+  });
+
+  close.addEventListener('click', () => {
+    overlay.style.display = 'none';
+  });
+});
+
+function showImage(url) {
+  // create a new image element
+  var img = document.createElement("img");
+  img.setAttribute("src", url);
+  
+  // get the image container and clear any existing content
+  var container = document.querySelector(".image-container");
+  container.innerHTML = "";
+  
+  // append the image to the container
+  container.appendChild(img);
+}
+
 
 
 
