@@ -156,6 +156,7 @@ function downloadImage() {
   document.body.removeChild(link);
 }
 
+
 // Get the popup and close button elements
 var popup = document.getElementById("popup");
 var close = document.getElementById("close");

@@ -43,14 +43,17 @@ html, body {
 }
 
 #map-image {
-  max-width: 95%;
+  max-width: 100%;
+  transform: scale(0.69);
   max-height: 100%;
-  border: 2px solid black;
+  position: fixed;
+  left: 865px;
+  top: 20px; /* adjust this value as needed */
+  border: 4px solid black;
   display: block;
-  transition: transform 0.3s ease-in-out;
   margin: auto;
-  cursor: pointer;
 }
+
 
 .controls-container {
   flex: 1;
@@ -206,12 +209,16 @@ body {
 }
 
 #datepicker-label
-{
+{ 
+  position: absolute;
+  right: 200px;
   font-family: 'Trebuchet MS';
 }
 
 #map-dropdown-label
-{
+{ 
+  position: absolute;
+  right: 455px;
   font-family: 'Trebuchet MS';
 }
 
@@ -226,6 +233,14 @@ body {
   padding: 5px;
   border-radius: 5px;
   cursor: pointer;
+  position: absolute;
+  right: 255px;
+}
+
+.date-cotainter
+{
+  position: absolute;
+  bottom: 0px;
 }
 
 #fmt
@@ -240,7 +255,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   position: absolute;
-  right: 100px;
+  right: 50px;
   top: 65px;
 }
 
@@ -256,8 +271,27 @@ body {
   border-radius: 5px;
   cursor: pointer;
   position: absolute;
-  right: 100px;
+  right: 50px;
   top: 65px;
+}
+
+#fb-label
+{
+  font-family: 'Trebuchet MS';
+  position: absolute;
+  right: 235px;
+  top: 55px;
+}
+
+#fmt-label
+{
+  min-width: 150px;
+  font-size: 15px;
+  display: inline-block;
+  font-family: 'Trebuchet MS';
+  position: absolute;
+  right: 150px;
+  top: 55px;
 }
 
 #update-button {
@@ -271,7 +305,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   position: absolute;
-  right: 425px;
+  right: 470px;
   top: 65px;
 }
 
@@ -287,14 +321,14 @@ body {
   border-radius: 5px;
   cursor: pointer;
   position: absolute;
-  right: 250px;
+  right: 340px;
   top: 65px;
 }
 
 #help-button {
   position: absolute;
-  top: 60px;
-  right: 380px;
+  top: 18px;
+  right: 50px;
   width: 30px;
   height: 30px;
   border: 1px solid black; /* add border property here */
@@ -321,6 +355,8 @@ body {
   padding: 5px;
   border-radius: 5px;
   cursor: pointer;
+  position: absolute;
+  right: 90px;
 }
 
 #popup {
