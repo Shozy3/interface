@@ -297,40 +297,6 @@ function downloadImage() {
   document.body.removeChild(link);
 }
 
-const imageContainers = document.querySelectorAll('.image-container');
-imageContainers.forEach(container => {
-  const overlay = container.querySelector('.overlay');
-  const enlargedImage = overlay.querySelector('.enlarged-image');
-  const close = overlay.querySelector('.close');
-  const originalImage = container.querySelector('img');
-
-  originalImage.addEventListener('click', () => {
-    overlay.style.display = 'flex';
-    enlargedImage.src = originalImage.src;
-  });
-
-  close.addEventListener('click', () => {
-    overlay.style.display = 'none';
-  });
-});
-
-function showImage(url) {
-  // create a new image element
-  var img = document.createElement("img");
-  img.setAttribute("src", url);
-  
-  // get the image container and clear any existing content
-  var container = document.querySelector(".image-container");
-  container.innerHTML = "";
-  
-  // append the image to the container
-  container.appendChild(img);
-}
-
-
-
-
-
 const updateButton = document.getElementById("update-button");
 
 let imageContainer = null;

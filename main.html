@@ -48,10 +48,6 @@
       <div id="image-container">
         <img id="map-image" src="" alt="">
       </div>
-      <div class="popup-image">
-        <span>&times;</span>
-        <img id="popup-image" src="" alt="">
-      </div>
     </div>
   </div>
   
@@ -62,19 +58,6 @@
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
   <script src="script.js"></script>
-  
-<script>
-  document.querySelectorAll('.popup-image img').forEach(image => {
-    image.onclick = () => {
-      document.querySelector('.popup-image').style.display = 'block';
-      document.querySelector('.popup-image img').src = image.getAttribute('src');
-    }
-  });
-  document.querySelector('.popup-image span').onclick = () =>
-  {
-    document.querySelector('.popup-image').style.display = 'none';
-  }
-</script>
 
 
 </body>
