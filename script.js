@@ -181,29 +181,29 @@ const imageMap = {
     if (check) {
       switch (fmtValue) {
         case "grass-zone1":
-          return date === "" ? "5.1) GrassZone1.jpg" : null;
+          return "5.1) GrassZone1.jpg";
         case "grass-zone2":
-          return date === "" ? "5.4) GrassZone2.jpg" : null;
+          return "5.4) GrassZone2.jpg";
         case "grass-zone3":
-          return date === "" ? "5.7) GrassZone3.jpg" : null;
+          return "5.7) GrassZone3.jpg";
         case "deciduous-zone1":
-          return date === "" ? "5.2) DeciduousZone1.jpg" : null;
+          return "5.2) DeciduousZone1.jpg";
         case "deciduous-zone2":
-          return date === "" ? "5.5) DeciduousZone2.jpg" : null;
+          return "5.5) DeciduousZone2.jpg";
         case "deciduous-zone3":
-          return date === "" ? "5.8) DeciduousZone3.jpg" : null;
+          return "5.8) DeciduousZone3.jpg";
         case "conifer-zone1":
-          return date === "" ? "5.3) ConiferZone1.jpg" : null;
+          return "5.3) ConiferZone1.jpg";
         case "conifer-zone2":
-          return date === "" ? "5.6) ConiferZone2.jpg" : null;
+          return "5.6) ConiferZone2.jpg";
         case "conifer-zone3":
-          return date === "" ? "5.9) ConiferZone3.jpg" : null;
+          return "5.9) ConiferZone3.jpg";
         case "fuel-map-overlay":
-          return date === "" ? "4) FuelMapOverlay.jpg" : null;
+          return "4) FuelMapOverlay.jpg";
         case "fpb-map":
-          return date === "" ? "5.10) FPBmap.jpg" : null;
+          return "5.10) FPBmap.jpg";
         case "spread-factor":
-          return date === "" ? "5.11) SpreadFactor.jpg" : null;
+          return "5.11) SpreadFactor.jpg";
         default:
           return null;
       }
