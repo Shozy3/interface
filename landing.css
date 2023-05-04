@@ -1,21 +1,33 @@
-body {
+body 
+{
     width: 100%;
     height: 100%;
     overflow: hidden;
 
-    position: absolute;
+    position: relative;
     min-height: 120vh;
     background-image: url('background.jpg');
     backdrop-filter: blur(2px);
     
     /* Add this to zoom out of the background image */
     background-size: cover;
-  }
+}
+
+
+h1
+{   
+    margin-left: 20%;
+    font-size: 2.8rem;
+    text-shadow: 2px 2px 5px #000000;
+    color: white;
+    -webkit-text-stroke: 1px #000000;
+    text-stroke: 1px #000000;
+}
 
 h3
 {
-    text-align: center;
-    font-size: 30px;
+    margin-left: 30%;
+    font-size: 1.8rem;
     text-shadow: 2px 2px 5px #000000;
     color: white;
 }
@@ -27,7 +39,7 @@ h3
     width: 100%;
     height: auto;
     right: 30%;
-    transform: scale(0.35);
+    transform: scale(0.30);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.4);
 }
   
@@ -38,7 +50,7 @@ h3
     width: 100%;
     height: auto;
     left: 30%;
-    transform: scale(0.33);
+    transform: scale(0.28);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
@@ -48,41 +60,31 @@ h3
     top: 30%;
     width: 100%;
     height: auto;
-    left: 0%;
-    transform: scale(0.33);
+    right: 0%;
+    transform: scale(0.28);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
-
-h1
-{
-    text-align: center;
-    font-size: 50px;
-    text-shadow: 2px 2px 5px #000000;
-    color: white;
-    -webkit-text-stroke: 1px #000000;
-    text-stroke: 1px #000000;
-}
 
 #caption1
 {
     text-align: center;
     text-shadow: 2px 2px 5px #000000;
-    font-size: 25px;
+    font-size: 1.5rem;
 
     color: white;
 
     right: 13%;
     position: absolute;
     width: 75%;
-    bottom: 30%;
+    bottom: 25%;
 }
 
 #caption2
 {   
     text-align: center;
     text-shadow: 2px 2px 5px #000000;
-    font-size: 25px;
+    font-size: 1.5rem;
 
     color: white;
 
@@ -122,5 +124,181 @@ h1
     transform: scale(1.1);
 }
 
+@media screen and (max-width: 1024px) and (max-height: 768px)
+{
+    body
+    {
+        min-height: 70vh;
+    }
 
-  
+    h1
+    {   
+        margin-left: 7%;
+        font-size: 1.7rem;
+    }
+
+    h3
+    {
+        margin-left: 20%;
+        font-size: 1rem;
+    }
+
+    #logo
+    {
+        transform: scale(0.25);
+        right: 35%;
+    }
+
+    #coe
+    {
+        transform: scale(0.25);
+        left: 7%;
+        top: 11x    %;
+    }
+
+    .start-button
+    {
+        transform: scale(0.7);
+        bottom: 60%;
+        left: 29%;
+    }
+
+    #eco
+    {
+        right: 15%;
+        top: 30%;
+    }
+
+    #caption1
+    {   
+        font-size: 0.8rem;
+        bottom: 25%;
+        right: 27%;
+    }
+
+    #caption2
+    {
+        font-size: 0.8rem;
+        right: 27%;
+    }
+}
+
+@media screen and (max-width: 1280px) and (max-height: 800px)
+{
+    body
+    {
+        min-height: 70vh;
+    }
+
+    h1
+    {   
+        margin-left: 7%;
+        font-size: 1.7rem;
+    }
+
+    h3
+    {
+        margin-left: 20%;
+        font-size: 1rem;
+    }
+
+    #logo
+    {
+        transform: scale(0.25);
+        right: 35%;
+    }
+
+    #coe
+    {
+        transform: scale(0.25);
+        left: 7%;
+        top: 11x    %;
+    }
+
+    .start-button
+    {
+        transform: scale(0.7);
+        bottom: 60%;
+        left: 29%;
+    }
+
+    #eco
+    {
+        right: 15%;
+        top: 30%;
+    }
+
+    #caption1
+    {   
+        font-size: 0.8rem;
+        bottom: 30%;
+        right: 27%;
+    }
+
+    #caption2
+    {
+        font-size: 0.8rem;
+        right: 27%;
+        bottom: 27%;
+    }
+}
+
+@media screen and (max-width: 1366px) and (max-height: 768px)
+{
+    body
+    {
+        min-height: 70vh;
+    }
+
+    h1
+    {   
+        margin-left: 7%;
+        font-size: 1.7rem;
+    }
+
+    h3
+    {
+        margin-left: 20%;
+        font-size: 1rem;
+    }
+
+    #logo
+    {
+        transform: scale(0.25);
+        right: 35%;
+    }
+
+    #coe
+    {
+        transform: scale(0.25);
+        left: 7%;
+        top: 11x    %;
+    }
+
+    .start-button
+    {
+        transform: scale(0.7);
+        bottom: 60%;
+        left: 29%;
+    }
+
+    #eco
+    {
+        right: 15%;
+        top: 30%;
+    }
+
+    #caption1
+    {   
+        font-size: 0.8rem;
+        bottom: 30%;
+        right: 27%;
+    }
+
+    #caption2
+    {
+        font-size: 0.8rem;
+        right: 27%;
+        bottom: 27%;
+    }
+}
