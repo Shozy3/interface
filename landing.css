@@ -1,76 +1,62 @@
-.container
-{
-    display: inline-block;
-    align-items: center;
-    width:auto;
-    height: 100vh;
-}
-
 body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    position: relative;
-    background-repeat: no-repeat;
+
+    position: absolute;
     min-height: 120vh;
     background-image: url('background.jpg');
-    background-attachment: fixed;
     backdrop-filter: blur(2px);
-    justify-content: center;
-    align-items: center;
+    
+    /* Add this to zoom out of the background image */
     background-size: cover;
-}
+  }
 
-h3 {
-    position: relative;
+h3
+{
     text-align: center;
     font-size: 30px;
     text-shadow: 2px 2px 5px #000000;
     color: white;
 }
 
-#logo, #coe, #eco {
-    position: relative;
-    transform: scale(0.4);
+#logo
+{
+    position: absolute;
+    top: 13%;
+    width: 100%;
+    height: auto;
+    right: 30%;
+    transform: scale(0.35);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+  
+#coe
+{
+    position: absolute;
+    top: 11%;
+    width: 100%;
+    height: auto;
+    left: 30%;
+    transform: scale(0.33);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
-#logo {
-    position: relative;
-    bottom: 450px;
-    width: 1150px;
-    right: 650px;
-}
-
-#coe {
-    position: relative;
-    bottom: 450px;
-    width: 1000px;
-    left: 700px;
-}
-
-#eco {
-    position: relative;
-    bottom: 260px;
-    width: 1000px;
-    right: 275px;
-    transform: scale(0.35);
-}
-
-.logo {
-    position: relative;
-    transform: scale(1.1);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-h1 {
-    display: inline-block;
-    position: relative;
-    left: 600px;
+#eco
+{
+    position: absolute;
+    top: 30%;
     width: 100%;
-    height: 100%;
+    height: auto;
+    left: 0%;
+    transform: scale(0.33);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+
+h1
+{
+    text-align: center;
     font-size: 50px;
     text-shadow: 2px 2px 5px #000000;
     color: white;
@@ -78,37 +64,45 @@ h1 {
     text-stroke: 1px #000000;
 }
 
-#caption1 {
+#caption1
+{
     text-align: center;
-    vertical-align: baseline;
     text-shadow: 2px 2px 5px #000000;
-    font-size: 30px;
-    color: white;
-    margin-left: 200px;
-    position: relative;
-    width: 75%;
-    bottom: 210px;
-}
-
-#caption2 {
-    position: relative;
-    color: white;
-    font-weight: bold;
-    bottom: 160px;
-    width: 100%;
-    text-align: center;
     font-size: 25px;
-    text-shadow: 2px 2px 5px #000;
+
+    color: white;
+
+    right: 13%;
+    position: absolute;
+    width: 75%;
+    bottom: 30%;
 }
 
-.start-button {
+#caption2
+{   
+    text-align: center;
+    text-shadow: 2px 2px 5px #000000;
+    font-size: 25px;
+
+    color: white;
+
+    right: 13%;
+    position: absolute;
+    width: 75%;
+    bottom: 20%;
+}
+
+
+.start-button
+{
     font-family: "Roboto", sans-serif;
     font-size: 18px;
     font-weight: bold;
     background: #15713b;
-    width: 160px;
-    position: relative;
-    bottom: 550px;
+    width: 100px;
+    position: absolute;
+    bottom: 60%;
+    right: 45%;
     padding: 20px;
     text-align: center;
     text-decoration: none;
@@ -122,34 +116,11 @@ h1 {
     -webkit-transition-property: box-shadow, transform;
     transition-property: box-shadow, transform;
 }
-.start-button:hover, .btn:focus, .btn:active {
-    position: relative;
+.start-button:hover, .btn:focus, .btn:active{
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
 
-.button {
-    text-align: center;
-    position: relative;
-    margin-left: 665px;
-    margin-right: 100px;
-    bottom: 0px;
-}
 
-@media screen and (min-width: 561px)
-{
-    body {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        position: absolute;
-        background-repeat: no-repeat;
-        min-height: 120vh;
-        background-image: url('background.jpg');
-        backdrop-filter: blur(2px);
-        justify-content: center;
-        align-items: center;
-        background-size: cover;
-    }
-}
+  
