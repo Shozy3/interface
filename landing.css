@@ -118,104 +118,10 @@ h1 {
     bottom: 0px;
 }
 
-/* Media queries for responsive design */
-@media screen and (max-width: 1200px) {
-    #logo {
-        right: 550px;
-    }
-    #coe {
-        left: 600px;
-    }
-    #eco {
-        right: 225px;
-    }
-    .button {
-        margin-left: 565px;
+@media screen and (mid-width: 769px)
+{
+    #logo
+    {
+        display: none;
     }
 }
-
-@media screen and (max-width: 992px) {
-    #logo {
-        bottom: 400px;
-        right: 450px;
-    }
-    #coe {
-        bottom: 400px;
-        left: 500px;
-    }
-    #eco {
-        bottom: 260px;
-        right: 175px;
-    }
-    .button {
-        margin-left: 465px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    #logo, #coe, #eco {
-        transform: scale(0.3);
-    }
-    #logo {
-        bottom: 300px;
-        right: 250px;
-    }
-    #coe {
-        bottom: 300px;
-        left: 300px;
-    }
-    #eco {
-        bottom: 200px;
-        right: 125px;
-    }
-    .start-button {
-        bottom: 400px;
-    }
-    .button {
-        margin-left: 365px;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    #logo, #coe, #eco {
-        transform: scale(0.2);
-    }
-    #logo {
-        bottom: 200px;
-        right: 150px;
-    }
-    #coe {
-        bottom: 200px;
-        left: 150px;
-    }
-    #eco {
-        bottom: 140px;
-        right: 75px;
-    }
-    h3 {
-        font-size: 20px;
-    }
-    h1 {
-        font-size: 30px;
-    }
-    #caption1 {
-        font-size: 20px;
-        bottom: 130px;
-    }
-    #caption2 {
-        font-size: 18px;
-        bottom: 90px;
-    }
-    .start-button {
-        font-size: 14px;
-        width: 120px;
-        bottom: 250px;
-        padding: 10px;
-    }
-    .button {
-        margin-left: 265px;
-    }
-}
-
-
-  
