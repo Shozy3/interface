@@ -2,7 +2,6 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-
     position: absolute;
     background-repeat: no-repeat;
     min-height: 120vh;
@@ -10,63 +9,49 @@ body {
     backdrop-filter: blur(2px);
     justify-content: center;
     align-items: center;
-    
-    /* Add this to zoom out of the background image */
     background-size: cover;
-  }
+}
 
-h3
-{
+h3 {
     text-align: center;
     font-size: 30px;
     text-shadow: 2px 2px 5px #000000;
     color: white;
 }
 
-#logo
-{
+#logo, #coe, #eco {
     position: absolute;
-    bottom: 500px;
+    transform: scale(0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#logo {
+    bottom: 450px;
     width: 1150px;
     right: 650px;
-    bottom: 450px;
-    transform: scale(0.5);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.4);
-}
-  
-#coe
-{
-    position: absolute;
-    bottom: 500px;
-    width: 1000px;
-    left: 680px;
-    bottom: 450px;
-    transform: scale(0.5);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
-#eco
-{
-    position: absolute;
-    bottom: 500px;
+#coe {
+    bottom: 450px;
     width: 1000px;
+    left: 700px;
+}
+
+#eco {
     bottom: 260px;
+    width: 1000px;
     right: 275px;
-    transform: scale(0.5);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.4);
+    transform: scale(0.35);
 }
 
-
-.logo
-{   
+.logo {
     transform: scale(1.1);
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-h1
-{
+h1 {
     text-align: center;
     font-size: 50px;
     text-shadow: 2px 2px 5px #000000;
@@ -75,23 +60,19 @@ h1
     text-stroke: 1px #000000;
 }
 
-#caption1
-{
+#caption1 {
     text-align: center;
     vertical-align: baseline;
     text-shadow: 2px 2px 5px #000000;
     font-size: 30px;
-
     color: white;
-
     margin-left: 200px;
     position: absolute;
     width: 75%;
     bottom: 210px;
 }
 
-#caption2
-{
+#caption2 {
     position: absolute;
     color: white;
     font-weight: bold;
@@ -102,9 +83,7 @@ h1
     text-shadow: 2px 2px 5px #000;
 }
 
-
-.start-button
-{
+.start-button {
     font-family: "Roboto", sans-serif;
     font-size: 18px;
     font-weight: bold;
@@ -125,19 +104,118 @@ h1
     -webkit-transition-property: box-shadow, transform;
     transition-property: box-shadow, transform;
 }
-.start-button:hover, .btn:focus, .btn:active{
+.start-button:hover, .btn:focus, .btn:active {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
 
-.button
-{
+.button {
     text-align: center;
     position: absolute;
     margin-left: 665px;
     margin-right: 100px;
     bottom: 0px;
 }
+
+/* Media queries for responsive design */
+@media screen and (max-width: 1200px) {
+    #logo {
+        right: 550px;
+    }
+    #coe {
+        left: 600px;
+    }
+    #eco {
+        right: 225px;
+    }
+    .button {
+        margin-left: 565px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #logo {
+        bottom: 400px;
+        right: 450px;
+    }
+    #coe {
+        bottom: 400px;
+        left: 500px;
+    }
+    #eco {
+        bottom: 260px;
+        right: 175px;
+    }
+    .button {
+        margin-left: 465px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #logo, #coe, #eco {
+        transform: scale(0.3);
+    }
+    #logo {
+        bottom: 300px;
+        right: 250px;
+    }
+    #coe {
+        bottom: 300px;
+        left: 300px;
+    }
+    #eco {
+        bottom: 200px;
+        right: 125px;
+    }
+    .start-button {
+        bottom: 400px;
+    }
+    .button {
+        margin-left: 365px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #logo, #coe, #eco {
+        transform: scale(0.2);
+    }
+    #logo {
+        bottom: 200px;
+        right: 150px;
+    }
+    #coe {
+        bottom: 200px;
+        left: 150px;
+    }
+    #eco {
+        bottom: 140px;
+        right: 75px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    #caption1 {
+        font-size: 20px;
+        bottom: 130px;
+    }
+    #caption2 {
+        font-size: 18px;
+        bottom: 90px;
+    }
+    .start-button {
+        font-size: 14px;
+        width: 120px;
+        bottom: 250px;
+        padding: 10px;
+    }
+    .button {
+        margin-left: 265px;
+    }
+}
+
 
   
