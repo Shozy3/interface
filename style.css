@@ -18,13 +18,13 @@ html, body {
 .map-container {
   flex: 0 0 60%;
   height: 100%;
-  padding: 20px;
+  padding: 1.5%;
 }
 
 #map {
   height: 95%;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 1%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s ease-in-out;
 }
@@ -34,41 +34,42 @@ html, body {
 }
 
 #map-image-container {
-  max-width: 600px;
-  max-height: 600px;
-  margin-right: 50px;
-  margin-top: 50px;
+  max-width: 50%;
+  max-height: 50%;
+  margin-right: 50%;
+  margin-top: 50%;
   position: absolute;
   overflow: hidden;
 }
 
 #map-image {
   max-width: 100%;
-  transform: scale(0.69);
+  transform: scale(0.7);
   max-height: 100%;
   position: fixed;
-  left: 865px;
-  top: 60px; /* adjust this value as needed */
+  left: 56.5%;
+  top: 5%; /* adjust this value as needed */
   border: 4px solid black;
   display: block;
   margin: auto;
+  z-index: 9;
 }
 
 
 .controls-container {
   flex: 1;
-  height: 665px;
-  width: 500px;;
+  height: 90%;
+  width: 33%;
   position: absolute;
-  margin-left: 950px;
-  padding: 20px;
+  margin-left: 62%;
+  padding: 1.5%;
 }
 
 #controls {
   position: relative;
   height: 95%;
   width: 95%;
-  padding: 20px;
+  padding: 3.3%;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -79,12 +80,6 @@ html, body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
-#image-container
-{
-  position: absolute;
-  bottom: 0px;
-  left: 10000px;
-}
 
 
 
@@ -123,24 +118,15 @@ body {
 }
 
 
-#logo {
-  display: block;
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  margin-top: 150px;
-  margin-left: auto;
-  margin-right: auto;
-  border: 2px solid #000000;
-}
 
 #controls > div {
-  margin-bottom: 10px;
+  margin-bottom: 0%;
 }
 
 #controls > div > label {
-  display: inline-block;
-  width: 60px;
+  display: block;
+  font-size: 0.9rem;
+  width: 40%;
   font-weight: bold;
 }
 
@@ -163,7 +149,7 @@ body {
   background-color: #fff;
   border: 1px solid #333;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  z-index: 2;
+  z-index: 10;
 }
 
 #instructions-container h2 {
@@ -255,7 +241,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   position: absolute;
-  right: 50px;
+  right: 5px;
   top: 65px;
 }
 
@@ -278,20 +264,20 @@ body {
 #fb-label
 {
   font-family: 'Trebuchet MS';
+  font-size: 1rem;
   position: absolute;
-  right: 235px;
-  top: 55px;
+  right: 16%;
+  top: 9.5%;
 }
 
 #fmt-label
 {
-  min-width: 150px;
-  font-size: 15px;
+  font-size: 1rem;
   display: inline-block;
   font-family: 'Trebuchet MS';
   position: absolute;
-  right: 150px;
-  top: 55px;
+  right: 22%;
+  top: 10%;
 }
 
 #update-button {
@@ -305,8 +291,8 @@ body {
   border-radius: 5px;
   cursor: pointer;
   position: absolute;
-  right: 470px;
-  top: 65px;
+  right: 87%;
+  top: 9.3%;
 }
 
 #download-button
@@ -321,14 +307,14 @@ body {
   border-radius: 5px;
   cursor: pointer;
   position: absolute;
-  right: 340px;
-  top: 65px;
+  right: 63%;
+  top: 9.3%;
 }
 
 #help-button {
   position: absolute;
-  top: 18px;
-  right: 50px;
+  top: 2.2%;
+  right: 10%;
   width: 30px;
   height: 30px;
   border: 1px solid black; /* add border property here */
@@ -356,7 +342,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   position: absolute;
-  right: 90px;
+  right: 17%;
 }
 
 #popup {
@@ -373,25 +359,25 @@ body {
 #popup h1
 {
   font-family: 'Trebuchet MS';
-  font-size: 40px;
+  font-size: 2.5rem;
   text-decoration: underline;
   font-weight: bold;
   color: #000000;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 5%;
 }
 
 #popup p
 {
   font-family: 'Trebuchet MS';
   position: absolute;
-  bottom: 150px;
-  right: 50px;
-  left: 50px;
-  font-size: 20px;
+  bottom: 40%;
+  right: auto;
+  left: auto;
+  font-size: 1.25rem;
   color: #000000;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 0%;
 }
 
 #popup-content {
@@ -409,8 +395,8 @@ body {
 
 #close {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0%;
+  right: 0.5%;
   font-size: 24px;
   font-weight: bold;
   cursor: pointer;
@@ -418,19 +404,44 @@ body {
 }
 
 
-
-/* Responsive layout */
-@media only screen and (max-width: 768px) {
-  .container {
-    flex-direction: column;
+@media only screen and (min-width: 1920px) and (min-height: 937px)
+{
+  #map-dropdown-label
+  { 
+    position: absolute;
+    right: 37rem;
+    font-family: 'Trebuchet MS';
   }
 
-  .map-container {
-    flex: 1;
+  #map-dropdown
+  {
+    right: 24rem;
   }
 
-  .controls-container {
-    flex: 0 0 40%;
-    margin-top: 20px;
+  #datepicker-label
+  { 
+    position: absolute;
+    right: 15rem;
+    font-family: 'Trebuchet MS';
   }
-  
+
+  #fmt
+  {
+    right: 5rem;
+    top: 5rem;
+  }
+
+  #fb
+  {
+    right: 8rem;
+    top: 5rem;
+  }
+
+  #map-image
+  {
+    top: 6rem;
+    right: 0rem;
+  }
+
+
+}
