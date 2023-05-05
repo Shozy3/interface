@@ -26,7 +26,7 @@ body
 h1
 {   
     margin-left: 20%;
-    font-size: 2.8rem;
+    font-size: 2.7rem;
     text-shadow: 2px 2px 5px #000000;
     color: white;
     -webkit-text-stroke: 1px #000000;
@@ -186,4 +186,13 @@ h3
         bottom: 25%;
     }
 }
+
+@media screen and (min-width: 1280px) and (min-height: 800px)
+{
+    h1
+    {
+        font-size: 10rem;
+    }
+}
+
 
