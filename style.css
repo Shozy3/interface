@@ -443,5 +443,9 @@ body {
     right: 0rem;
   }
 
+  #popup p
+  {
+    font-size: 2rem;
+  }
 
 }
