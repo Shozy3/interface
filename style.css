@@ -448,4 +448,8 @@ body {
     font-size: 2rem;
   }
 
+  #popup h1
+  {
+    font-size: 3.5rem; 
+  }
 }
