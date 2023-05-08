@@ -46,6 +46,8 @@ h3
     font-size: 1.8rem;
     text-shadow: 2px 2px 5px #000000;
     color: white;
+    -webkit-text-stroke: 1px #000000;
+    text-stroke: 1px #000000;
 }
 
 #logo
@@ -73,12 +75,36 @@ h3
 #eco
 {
     position: absolute;
-    top: 30%;
+    top: 28%;
     width: 100%;
     height: auto;
-    right: 0%;
+    right: 30%;
     transform: scale(0.28);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#ai4
+{
+    position: absolute;
+    top: 22%;
+    width: 100%;
+    height: auto;
+    left: 30%;
+    transform: scale(0.25);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.4); 
+}
+
+#ai4l
+{
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 5px #000000;
+    color: white;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    right: 100%;
+    -webkit-text-stroke: 0.2px #000000;
+    text-stroke: 1px #000000;
 }
 
 
@@ -121,7 +147,7 @@ h3
     width: 100px;
     position: absolute;
     bottom: 60%;
-    right: 45%;
+    right: 46%;
     padding: 20px;
     text-align: center;
     text-decoration: none;
