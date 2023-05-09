@@ -94,17 +94,6 @@ h3
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.4); 
 }
 
-#ai4l
-{
-    font-size: 1.5rem;
-    text-shadow: 2px 2px 5px #000000;
-    color: white;
-    text-align: center;
-    margin-left: 0%;
-    right: 100%;
-    -webkit-text-stroke: 0.4px #000000;
-    text-stroke: 1px #000000;
-}
 
 
 #caption1
@@ -118,7 +107,35 @@ h3
     right: 13%;
     position: absolute;
     width: 75%;
-    bottom: 25%;
+    bottom: 33%;
+}
+
+#caption1-1
+{
+    text-align: center;
+    text-shadow: 2px 2px 5px #000000;
+    font-size: 1.5rem;
+
+    color: white;
+
+    right: 13%;
+    position: absolute;
+    width: 75%;
+    bottom: 28%;
+}
+
+#caption1-2
+{
+    text-align: center;
+    text-shadow: 2px 2px 5px #000000;
+    font-size: 1.5rem;
+
+    color: white;
+
+    right: 13%;
+    position: absolute;
+    width: 75%;
+    bottom: 24%; 
 }
 
 #caption2
@@ -166,6 +183,77 @@ h3
     transform: scale(1.1);
 }
 
+@media only screen and (min-width: 1014px) and (min-height: 958px)
+{
+
+
+    h1
+    {
+        font-size: 2.7rem;
+        margin-left: 5%;
+    }
+
+    h3
+    {
+        font-size: 2rem;
+        margin-left: 15%;
+    }
+
+    #logo
+    {
+        transform: scale(0.4);
+
+    }
+
+    #eco
+    {
+        transform: scale(0.4);
+        top: 38%;
+    }
+
+    #coe
+    {
+        transform: scale(0.37);
+        top: 11.57%;
+        left: 29    %;
+    }
+
+    #ai4
+    {
+        transform: scale(0.35); 
+        left: 30%;
+        top: 34.5%;
+    }
+
+    #caption1
+    {
+        width: 100%;
+        left: 0%;    
+    }
+
+    #caption1-1
+    {
+        display: inline;
+        width: 100%;
+        left: 0%;
+        bottom: 30%;
+    }
+
+    #caption1-2
+    {
+        width: 100%;
+        left: 0%;
+        bottom: 27%;
+    }
+
+    #caption2
+    {
+        width: 100%;
+        left: 0%;
+    }   
+
+}
+
 
 @media only screen and (min-width: 1920px) and (min-height: 937px)
 {
@@ -194,10 +282,6 @@ h3
         transform: scale(1.4);
     }
 
-    #ai4l
-    {
-        font-size: 2rem;
-    }
     
     #caption1
     {
@@ -209,7 +293,6 @@ h3
         font-size: 1.8rem;
     }
 }
-
 
 
 

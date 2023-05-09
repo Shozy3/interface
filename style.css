@@ -204,14 +204,15 @@ body {
 #map-dropdown-label
 { 
   position: absolute;
-  right: 455px;
+  right: 85%;
   font-family: 'Trebuchet MS';
 }
 
 #map-dropdown
 {
   font-family: 'Trebuchet MS';
-  font-size: 14px;
+  transform: scale(1.0);
+  font-size: 0.87rem;
   font-weight: bold;
   background-color: #a5a3a3;
   color: #000000;
@@ -220,7 +221,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   position: absolute;
-  right: 255px;
+  right: 47%;
 }
 
 .date-cotainter
@@ -401,6 +402,88 @@ body {
   font-weight: bold;
   cursor: pointer;
   z-index: 9999;
+}
+
+@media only screen and (min-width: 1014px) and (min-height: 958px)
+{
+  #map-dropdown
+  {
+    font-size: 0.45rem;
+    right: 52%;
+  }
+
+  #map-dropdown-label
+  {
+    font-size: 0.65rem;
+  }
+
+  #datepicker
+  {
+    font-size: 0.45rem;
+    right: 16%;
+  }
+
+  #datepicker-label
+  {
+    font-size: 0.65rem;
+    right: 36%; 
+  }
+
+  #help-button
+  {
+    right: 3%;
+    transform: scale(0.9);
+    top: 1%;
+  }
+  
+  #update-button
+  {
+    transform: scale(0.9);
+    right: 83%;
+    top: 9.3%;
+  }
+
+  #download-button
+  {
+    transform: scale(0.9);
+    right: 50%;
+    top: 9.3%;
+  }
+
+  #fmt
+  {
+    transform: scale(0.9);
+    right: 0.5%;
+    top: 9.5%;
+  }
+
+  #fmt-label
+  {
+    font-size: 0.65rem;
+    right: 0.3%;
+    top: 5.5%;
+  }
+
+  #fb
+  {
+    transform: scale(0.9);
+    right: 0.5%;
+    top: 9.5%;
+  }
+
+  #fb-label
+  {
+    font-size: 0.65rem;
+    right: 0.1%;
+    top: 7%;
+  }
+
+  #map-image
+  {
+    transform: scale(0.35);
+    bottom: 23rem;
+    left: 21.5rem;
+  }
 }
 
 
