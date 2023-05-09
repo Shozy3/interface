@@ -252,6 +252,13 @@ h3
         left: 0%;
     }   
 
+    .start-button
+    {
+        transform: scale(1.2);
+        bottom: 60%;
+        right: 43%;
+    }
+
 }
 
 
