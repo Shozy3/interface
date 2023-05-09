@@ -484,6 +484,18 @@ body {
     bottom: 23rem;
     left: 21.5rem;
   }
+
+  #popup h1
+  {
+    font-size: 3rem;
+  }
+
+  #popup p
+  {
+    font-size: 2.2rem;
+    top: 27%;
+    right: 1%;
+  }
 }
 
 
