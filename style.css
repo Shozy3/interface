@@ -47,8 +47,8 @@ html, body {
   transform: scale(0.65);
   max-height: 100%;
   position: fixed;
-  left: 57%;
-  top: 10%; /* adjust this value as needed */
+  left: 56.5%;
+  top: 5%; /* adjust this value as needed */
   border: 4px solid black;
   display: block;
   margin: auto;
